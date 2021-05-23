@@ -1,3 +1,9 @@
 from django.contrib import admin
+from .models import vehicleStatus
 
-# Register your models here.
+
+class vehicleStatusAdmin(admin.ModelAdmin):
+    list_display = ('vehicleid',)
+
+
+admin.site.register(vehicleStatus, vehicleStatusAdmin)
