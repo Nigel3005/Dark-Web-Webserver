@@ -1,0 +1,21 @@
+<body>
+    <h1>Voertuigen Overzicht</h1>
+    <br>
+    {% if vehicleid != None %}
+        {% if vehicle_statusses|length > 0 %}
+                <h2> Voertuigen </h2>
+            {% for status in vehicle_statusses %}
+                <p>Naam voertuig: {{ status.vehicle_name }}</p>
+                <p>Kenteken: {{ status.vehicleid }}</p>
+                <p>Charging: {{ status.test_1 }}</p>
+                <p>Percentage: {{ status.test_2 }}%</p>
+                <p>Laatst Online: {{ status.time }}</p>
+                <br>
+            {% endfor %}
+        {% else %}
+            <p>Er zijn geen gegevens bekend bij dit kenteken ( {{ vehicleid }} ) </p>
+        {% endif %}
+     {% else %}
+        <p>Account niet actief.</p>
+    {% endif %}
+</body>

@@ -1,0 +1,26 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connected Vehicles</title>
+    <link rel="stylesheet" href="{% static 'style/index.css' %}">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <link rel="icon" href="{% static 'python.ico' %}">
+</head>
+<header>
+    <ul>
+        <li><a class="active" href="/home">Connected-Vehicles</a></li>
+        <li style="float:right"><a href="/login">Login</a></li>
+        <li style="float:right"><a href="/register">Register</a></li>
+    </ul>
+</header>
+
+{% include page %}
+
+<footer>
+    <p>copyright Nigel</p>
+</footer>
+
+</html>
